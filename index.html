@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Mania</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/sec2.css">
+    <link rel="stylesheet" href="./css/sec3.css">
+    <link rel="stylesheet" href="./css/sec3_1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Swiper.js CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="./css/slider.css">
+<link rel="stylesheet" href="./css/chart.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="main_padding_box">
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo_d_1"></div>
+                    <div class="logo_d_2"></div>
+                    <div class="logo_text">
+                        <div class="casa">Casa</div>
+                        <div>Mania</div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Type to search..." />
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="nav_main">
+                    <nav class="nav">
+                        <ul class="nav-links">
+                            <!-- Dropdown for Buy -->
+                            <li class="dropdown">
+                                <a href="#buy">Buy <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Houses for Sale in Brampton</a></li>
+                                    <li><a href="#">Condos for Sale</a></li>
+                                    <li><a href="#">Townhouses for Sale</a></li>
+                                    <li><a href="#">Recently Sold</a></li>
+                                    <li><a href="#">Map Search</a></li>
+                                    <li><a href="#">New Listing</a></li>
+                                </ul>
+                            </li>
+                            <!-- Dropdown for Rent -->
+                            <li class="dropdown">
+                                <a href="#rent">Rent <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Apartments for Rent</a></li>
+                                    <li><a href="#">Houses for Rent</a></li>
+                                    <li><a href="#">Short-term Rentals</a></li>
+                                    <li><a href="#">Vacation Rentals</a></li>
+                                    <li><a href="#">Luxury Rentals</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#sell">Sell</a></li>
+                            <li><a href="#trends">Market Trends</a></li>
+                            <li><a href="#resources">Resources & Blogs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sign In Button -->
+                <div class="head_sign">
+                    <div><i class="fa-regular fa-heart"></i></div>
+                    <div class="nav_bell"><i class="fa-regular fa-bell"></i></div>
+                    <button class="sign-in"><i class="fa-solid fa-user"></i> Sign In</button>
+                </div>
+
+
+
+                <!-- ......................... -->
+                <div class="menu-container">
+                    <!-- Hamburger Menu Icon -->
+                    <i class="fas fa-bars menu-icon" id="menu-icon"></i>
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar" id="navbar">
+                    <!-- Close Icon inside Navbar -->
+                    <i class="fas fa-times close-icon" id="close-icon"></i>
+                    <nav class="nav">
+                        <ul class="nav-links">
+                            <!-- Dropdown for Buy -->
+                            <li class="dropdown">
+                                <a href="#buy">Buy <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Houses for Sale in Brampton</a></li>
+                                    <li><a href="#">Condos for Sale</a></li>
+                                    <li><a href="#">Townhouses for Sale</a></li>
+                                    <li><a href="#">Recently Sold</a></li>
+                                    <li><a href="#">Map Search</a></li>
+                                    <li><a href="#">New Listing</a></li>
+                                </ul>
+                            </li>
+                            <!-- Dropdown for Rent -->
+                            <li class="dropdown">
+                                <a href="#rent">Rent <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Apartments for Rent</a></li>
+                                    <li><a href="#">Houses for Rent</a></li>
+                                    <li><a href="#">Short-term Rentals</a></li>
+                                    <li><a href="#">Vacation Rentals</a></li>
+                                    <li><a href="#">Luxury Rentals</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#sell">Sell</a></li>
+                            <li><a href="#trends">Market Trends</a></li>
+                            <li><a href="#resources">Resources & Blogs</a></li>
+                        </ul>
+                    </nav>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- section 2 is now coming -->
+        <section>
+            <div class="body3">
+                <div class="gallery-container">
+                    <!-- Visible section -->
+                    <div class="preview-gallery">
+                        <img src="../images/home1.jpg" alt="Image 1">
+                        <img src="../images/home1.jpg" alt="Image 2">
+                        <div class="blur-box" onclick="openFullGallery()">
+                            <span>See all 35 photos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for full gallery -->
+                <div id="full-gallery" class="modal">
+                    <span class="close" onclick="closeFullGallery()">&times;</span>
+                    <div class="modal-content">
+                        <!-- Gallery of 35 images -->
+                        <div class="full-gallery">
+                            <!-- Repeat for all 35 images -->
+                            <img src="../images/home1.jpg" alt="Image 1">
+                            <img src="../images/home1.jpg" alt="Image 2">
+                            <img src="../images/home1.jpg" alt="Image 3">
+                            <img src="../images/home1.jpg" alt="Image 4">
+                            <img src="../images/home1.jpg" alt="Image 5">
+                            <!-- Add up to 35 images -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ////////////////////////////////section 3------------------------------ -->
+        <section class="section3">
+            <div class="left-column">
+                <div class="property-card">
+                    <div class="card-header">
+                        <div class="card_htop">
+                            <span class="price">C$678,800</span>
+                        <span class="bed-bath">3 bd | 3 ba | 1444 sqft</span>
+                        </div>
+                        <span class="est-monthly">est. <span class="monthly-price">$5331.01 / mo</span></span>
+                    </div>
+                    <hr>
+                    <div class="card-footer">
+                        <div class="card-body">
+                            <h2>10 Marshall Blvd, ON, Toronto</h2>
+                            <p class="location">Rockcliffe-Smythe</p>
+                        </div>
+                        <div class="card_bodyr">
+                            <span class="green-dot"></span><span class="for-sale">For Sale</span>
+                        <div class="actions">
+                            <button class="action-btn">Save</button>
+                            <button class="action-btn">Facebook</button>
+                            <button class="action-btn">Email</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+<!-- text below the blue card left side -->
+<div class="property-details">
+    <!-- Left Column -->
+    <div class="details-column">
+      <p><span class="deta_1">Type</span> <span>Residential Property</span></p>
+      <p><span class="deta_1">Style</span> <span>2-Storey</span></p>
+      <p><span class="deta_1">Size</span> <span>2000–2500 sqft</span></p>
+      <p><span class="deta_1">Lot Size</span> <span>25 x 126 Feet</span></p>
+      <p><span class="deta_1">Year Built</span> <span>0–5</span></p>
+      <p><span class="deta_1">Taxes</span> <span>$6200 per year</span></p>
+      <p><span class="deta_1">Source</span> <span>TRREB</span></p>
+    </div>
+
+    <!-- Right Column -->
+    <div class="details-column">
+      <p><span class="deta_1">Added</span> <span>2023-01-21</span></p>
+      <p><span class="deta_1">Updated</span> <span>2023-01-21</span></p>
+      <p><span class="deta_1">Last Checked</span> <span>2023-01-21</span></p>
+      <p><span class="deta_1">MLS®</span> <span>W5876825</span></p>
+      <p><span class="deta_1">Listed By</span> <span>CENTURY 21 ATRIA REALTY INC., BROKERAGE</span></p>
+      <p><span class="deta_1">Property Zoning</span> <span>Rm</span></p>
+    </div>
+  </div>
+
+  <!-- text ---------------------------------------------------------------------------================ -->
+  <div class="container2">
+    <h2>Listing Description</h2>
+    <p>
+      Custom Built Brand New Jewel With $60,000 Full Renovation And Upgrade For A Basement Suite, New Upgraded 
+      Electrical And Smart Panel, Sump Pump And New Laundry Room Added Upstairs. Only Top Product And Materials 
+      Used. S.S Appliances, And Permit For The In Lane Garage To Be Built As Another Multilevel Unit For More Income 
+      Or In-Laws. 10 Ft Super High Ceilings That Take Your Breath Away. A Must See. Client Put Her Heart And Wallet 
+      Into This Home. 3000Sqft.
+    </p>
+
+    <h3>Extras:</h3>
+    <p>
+      Full Camera And Outdoor Lighting System. 2 S/S Fridges, 2 S/S Ovens, 2 Washer And Dryers, S/S Dishwasher, All 
+      Window Coverings, Bbq Gas Line, New Interlock, Deck And Fake Durable Grass And Landscape In Front. Quiet Dead 
+      End Street.
+    </p>
+
+    <p class="footer-text" style="color: #000000;">
+      This Residential Property located at 10 Marshall Blvd, ON, Toronto is currently for $1,349,000 and has been 
+      available on <a style="text-decoration: none; color: #14BFF3;" href="#">casamania.ca</a> for 0 days. This property is listed at $1,349,000. It has 4 beds, 4 bathrooms, and 
+      is 2000–2500 square feet. 10 Marshall Blvd, Ontario is in Toronto across Lampton Ave/ Rockcliffe Blvd.
+    </p>
+
+    <a href="#" class="button">See More Facts and Features</a>
+  </div>
+
+
+
+<!-- ================================================================ uper ting of image first slider -->
+ 
+<section class="container4">
+    <h2>Sold History</h2>
+    <p>Listing records and last sold date for 316 Landsbridge Street, Caledon</p>
+
+    <!-- Selling Section -->
+    <h3>Selling</h3>
+    <table class="history-table">
+      
+      <tbody>
+        <tr>
+          <td>W5882658</td>
+          <td>Jan 27, 2023</td>
+          <td class="status"><span>Listed</span><div class="green-dot"></div></td>
+          <td>$1,399,000</td>
+        </tr>        
+      </tbody>
+    </table>
+    <hr>
+    <table class="history-table">
+        <tbody>
+          <tr>
+            <td>W5882658</td>
+            <td>Jan 27, 2023</td>
+            <td class="status"><span>Removed</span><div class="gray-dot"></div></td>
+            <td>$1,399,000</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Sep 20, 2022</td>
+            <td class="status"><span>Listed</span></td>
+            <td>$1,399,000</td>
+          </tr>
+          
+        </tbody>
+      </table>
+<hr>
+    <!-- Renting Section -->
+    <h3>Renting</h3>
+    <table class="history-table">
+      
+      <tbody>
+        <tr>
+          <td>W5882658</td>
+          <td>Jan 27, 2023</td>
+          <td class="status"><span>Listed</span><div class="green-dot"></div></td>
+          <td>$1,399,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Buttons Section -->
+    <div class="buttons">
+      <a href="#" class="button">Sold Comparables</a>
+      <a href="#" class="button secondary">Rent Comparables</a>
+    </div>
+
+    <!-- Footer Link -->
+</section>
+<section class="section5">
+    <div id="solde"><h3>Sold Comparables</h3></div>
+    <p class="link"> Homes near <a href="#" class="link" style="text-decoration: none; color: #00CFFF;">10 Marshall Blvd, ON, Toronto</a></p>
+
+
+
+    <!-- Swiper Slider Section -->
+<section class="property-slider">
+    <div class="swiper">
+      <!-- Slider Wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="slider-card">
+            <img src="../images/p.avif" alt="Property 1">
+            <div class="card-info">
+              <span class="sold-tag">SOLD - 4 March, 2022</span>
+              <h4>$699,999</h4>
+              <p>3 bed | 3 bath | 1000-1199 sqft</p>
+              <p>214-188 Mill Street S, Brampton, ON</p>
+              <span class="mls">MLS# W5870373</span>
+              <span class="date-info">8 Days Ago</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="swiper-slide" >
+          <div class="slider-card">
+            <img src="../images/p.avif" alt="Property 2">
+            <div class="card-info">
+              <span class="sold-tag">SOLD - 11 May, 2022</span>
+              <h4>$699,999</h4>
+              <p>3 bed | 3 bath | 1000-1199 sqft</p>
+              <p>214-188 Mill Street S, Brampton, ON</p>
+              <span class="mls">MLS# W5870373</span>
+              <span class="date-info">2 Days Ago</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 3 -->
+        <div class="swiper-slide" >
+          <div class="slider-card">
+            <img src="../images/p.avif" alt="Property 3">
+            <div class="card-info">
+              <span class="sold-tag">SOLD - 16 March, 2022</span>
+              <h4>$699,999</h4>
+              <p>3 bed | 3 bath | 1000-1199 sqft</p>
+              <p>214-188 Mill Street S, Brampton, ON</p>
+              <span class="mls">MLS# W5870373</span>
+              <span class="date-info">5 Days Ago</span>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+            <div class="slider-card">
+              <img src="../images/p.avif" alt="Property 3">
+              <div class="card-info">
+                <span class="sold-tag">SOLD - 16 March, 2022</span>
+                <h4>$699,999</h4>
+                <p>3 bed | 3 bath | 1000-1199 sqft</p>
+                <p>214-188 Mill Street S, Brampton, ON</p>
+                <span class="mls">MLS# W5870373</span>
+                <span class="date-info">5 Days Ago</span>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+  
+      <!-- Slider Navigation Buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  
+</section>
+
+
+
+
+<div class="char_body">
+    <div class="chart-container" id="chartContainer">
+        <canvas id="trendChart"></canvas>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+            </div>
+            <div class="right-column">
+                <h2>Right Column</h2>
+                <p>This is the right column content.</p>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+<script src="./javascript/chart.js"></script>
+<!-- Swiper.js JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./javascript/slider.js"></script>
+    <script src="./javascript/header.js"></script>
+    <script src="./javascript/sec35.js"></script>
+</body>
+
+</html>

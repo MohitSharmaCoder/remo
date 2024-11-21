@@ -1,0 +1,22 @@
+/* Container for grid */
+.section3 {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: calc(65% - 20px) 35%;
+    gap: 20px;
+    /* padding: 20px; */
+  }
+  
+  /* Styling for columns */
+  .left-column, .right-column {
+    /* background-color: #f4f4f4; */
+    /* padding: 20px; */
+    border-radius: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .section3 {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+  }

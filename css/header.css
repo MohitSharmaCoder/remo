@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_padding_box {
+    padding: 16px 31px;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    
+}
+
+/* Header Styles */
+.header {
+    background-color: #003049;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo_d_1 {
+    top: 60px;
+    left: 76px;
+    width: 34px;
+    height: 34px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 51px 0px 0px 51px;
+    opacity: 1;
+}
+
+.logo_d_2 {
+    left: 112px;
+    width: 34px;
+    height: 34px;
+    transform: matrix(0, 1, -1, 0, 0, 0);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 51px 0px 0px 51px;
+    opacity: 1;
+    margin: 0px 2px;
+}
+.casa{
+    margin-bottom: -10px;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 1;
+    max-width: 350px;
+    margin: 0px 30px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Navigation Links */
+.nav_main{
+    display: block;
+  }
+.nav {
+    flex: 1;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    position: relative;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #1a476f;
+    /* Slightly lighter blue */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* left: 50%; */
+    right: 0px;
+    background-color: #062639;
+    border: 1px solid #1a476f;
+    border-radius: 4px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #1a476f;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Sign In Button */
+.head_sign{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.nav_bell{
+    margin: 0px 10px;
+}
+.sign-in {
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: #003049 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 21px;
+    opacity: 1;
+}
+.sign-in i{
+    color: #15C9FF;
+}
+
+.sign-in:hover {
+    background-color: #1a476f;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main_padding_box {
+        padding: 0;
+    }
+    .header {
+        background-color: #003049;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 0px;
+    }
+    .search-bar {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .sign-in {
+        margin-top: 10px;
+    }
+}
+
+
+
+/* menu hamburger*/
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  
+  /* Close Icon inside Navbar */
+  .close-icon {
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Navbar Links */
+  .navbar ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin: 20px 0;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* When the navbar is open */
+  .navbar.open {
+    right: -100%;
+  }
+  .navbar.open1 {
+    right: 0;
+  }
+
+
+  @media (max-width: 1024px) {
+    .navbar{
+        display: block;
+    }
+    .menu-container {
+        display: block;
+        position: relative;
+        top: 50%;
+      }
+      .nav_main{
+        display: none;
+      }
+  }
+  
+  @media (max-width:780px) {
+    .menu-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+  }
+
+
+  /* 2222222222222222222222222222222222222222222222 section 222222222222222222222222222222222222222222222 */
+  

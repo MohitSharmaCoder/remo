@@ -1,0 +1,448 @@
+
+  /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  
+  .property-card {
+    background-color: #003049;
+    color: #fff;
+    /* width: 400px; */
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 16px;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .bed-bath {
+    font-size: 14px;
+  }
+  
+  .card-body {
+    margin-top: 0px;
+    
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .location {
+    color: #7a7a7a;
+    font-size: 14px;
+  }
+  
+  .card-footer {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .est-monthly {
+    font-size: 16px;
+  }
+  
+  .monthly-price {
+    font-weight: bold;
+  }
+  .green-dot {
+    width: 10px;          
+    height: 10px;          
+    background-color: green; 
+    border-radius: 50%;   
+    display: inline-block; 
+  }
+  .for-sale {
+    /* background-color: #28a745; */
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .action-btn {
+    background-color: #345C70;
+    color: #15C9FF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .action-btn:hover {
+    background-color: #03507688;
+  }
+  
+
+  @media (max-width: 768px) {
+    .card-header {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .card-footer {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  }
+
+
+  /* ======== 2222222222222222222222222222222 ================================== */
+ 
+  .property-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #F4F4F4;
+    /* border: 1px solid #ddd; */
+    margin-top: 20px;
+    border-radius: 8px;
+    flex-wrap: wrap; /* Ensures content wraps for smaller devices */
+  }
+
+  .details-column {
+    width: 48%; /* Default for desktop */
+    margin-bottom: 20px;
+  }
+
+  .details-column p {
+    margin: 8px 0;
+  }
+
+  .details-column p .deta_1 {
+    font-weight: bold;
+  }
+  .deta_1{
+    margin-right: 50px;
+  }
+  .details-column p{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tablet Styles */
+  @media (max-width: 768px) {
+    .details-column {
+      width: 100%; /* Full-width for tablet */
+      text-align: left;
+    }
+  }
+
+  /* Phone Styles */
+  @media (max-width: 480px) {
+    .property-details {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .details-column {
+      width: 100%; /* Full-width for phone */
+      margin-bottom: 10px;
+    }
+
+    .details-column p {
+      font-size: 14px; /* Smaller font size for phone */
+    }
+  }
+
+
+  /* /333333333333333333333333333333333333333333333333333333333333333333333333333333333 */
+
+  .container2 {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #F4F4F4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .container h2 {
+    color: #003049; /* Red heading color */
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+
+  .container2 h3 {
+    color: #003049;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+
+  .container2 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #707070;
+  }
+
+  .extras {
+    margin-top: 20px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 30px;
+    line-height: 1.5;
+  }
+
+  .container2 .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #06282F;
+   /*  background-color: #06282F; Blue button */
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #06282F;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+
+    h2, h3 {
+      font-size: 1.5rem;
+    }
+
+    p, .footer-text {
+      font-size: 0.95rem;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2, h3 {
+      font-size: 1.2rem;
+    }
+
+    p, .footer-text {
+      font-size: 0.85rem;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+
+
+  /* ============================first thing that is above the first image slider */
+  .container4 {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+
+  .container4 h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container4 h2::before {
+    content: '📄'; /* Icon before the heading */
+    margin-right: 8px;
+    font-size: 1.5rem;
+  }
+
+  .container4 p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  /* Table Styles */
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  .history-table th, .history-table td {
+    padding: 10px;
+    text-align: left;
+    /* border-bottom: 1px solid #ddd; */
+  }
+
+  .history-table th {
+    color: #555;
+    font-weight: bold;
+  }
+
+  .history-table .status {
+    display: flex;
+    align-items: center;
+  }
+
+  .history-table .status span {
+    margin-left: 8px;
+    /* font-size: 0.9rem; */
+    color: #666;
+  }
+  tr{
+    display: grid;
+    width: 100%;
+    background-color: #EFF1F4;
+    /* align-items: ; */
+    grid-template-columns: repeat(4, 1fr);
+    margin: 10px 0px;
+  }
+  @media (max-width: 780px){
+    tr{
+      grid-template-columns: repeat(2, 1fr);
+      margin: 10px 0px;
+    }
+  }
+  .history-table .green-dot {
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 2px;
+  }
+
+  .history-table .gray-dot {
+    width: 8px;
+    height: 8px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-left: 2px;
+  }
+
+.container4 .buttons {
+    display: flex;
+    gap: 10px;
+
+  }
+
+.container4  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #003049;
+    text-decoration: none;
+    /* border: 2px solid #333; */
+    border-radius: 32px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .container4  .button.secondary {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 32px;
+  }
+
+  .container4  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .container4  .button.secondary:hover {
+    background-color: #5a6268;
+  }
+
+  .container4 .link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .container4  .link:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container4 {
+      padding: 15px;
+    }
+.container4 .buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+  }
+    .container4 h2 {
+      font-size: 1.5rem;
+    }
+
+    .history-table th, .history-table td {
+      font-size: 0.95rem;
+    }
+
+    .container4 .button {
+      font-size: 0.95rem;
+      padding: 8px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container4  h2 {
+      font-size: 1.3rem;
+    }
+
+    .history-table th, .history-table td {
+      font-size: 0.85rem;
+    }
+
+    .container4 .button {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+
+   .solde h2{
+    display: block;
+    margin-top: 30px;
+    font-size: 29px;
+    color: #000000;
+  }

@@ -1,0 +1,145 @@
+/* Swiper Slider */
+.property-slider {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .slider-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .slider-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .slider-card img {
+    width: 100%;
+    /* height: 150px; */
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    padding: 15px;
+    position: relative;
+  }
+  
+  .sold-tag {
+    display: inline-block;
+    background: #e74c3c;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .card-info h4 {
+    font-size: 20px;
+    color: #00274d;
+    margin-bottom: 5px;
+  }
+  
+  .card-info p {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 5px;
+  }
+  
+  .card-info .mls {
+    font-size: 12px;
+    color: #888888;
+  }
+  
+  .card-info .date-info {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 12px;
+    color: #555555;
+  }
+  .property-slider {
+    width: 100%;
+    max-width: 1200px; /* width of the slider */
+    margin: 0 auto;    /* r */
+    padding: 40px 0;   /* */
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    width: 100%;
+  }
+  
+  .swiper-slide {
+    flex-shrink: 0;
+    width: 200px; /*  */
+  }
+
+  /* ////// updated ====== */
+  .swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+/* Adjust pagination dots if necessary */
+.swiper-pagination-bullet {
+  background: #555555;
+}
+
+@media (max-width: 1024px) {
+    .slider-card img {
+        width: 100%;
+        /* height: 150px; */
+        height: 150px;
+        object-fit: cover;
+      }
+      
+  }
+
+  
+  @media (max-width: 724px) {
+      .slider-card img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+        }
+        .swiper-slide {
+          width: 100% !important; 
+        }
+        .property-slider {
+            width: 100%;
+            max-width: 724px; 
+            margin: 0 auto;    
+            padding: 40px 0;   
+          }
+          
+          .swiper-wrapper {
+            display: flex;
+            width: 100% !important;
+          }
+          
+          .swiper-slide {
+            flex-shrink: 0;
+            width: 100% !important;
+          }
+    }
+    @media (max-width: 375px) {
+        
+          .property-slider {
+              width: 100%;
+              max-width: 375px; 
+            }           
+      }
+      @media (max-width: 414px) {
+        
+        .property-slider {
+            width: 100%;
+            max-width: 414px; 
+          }           
+    }
+    
+
